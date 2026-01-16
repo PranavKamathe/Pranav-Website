@@ -1,0 +1,124 @@
+
+
+/* Section */
+#coding-profiles {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+#coding-profiles h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+#coding-profiles h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.profiles-intro {
+  text-align: center;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* GRID */
+.coding-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.coding-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #2c3e50;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient hover background */
+.coding-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    rgba(255, 255, 255, 0.9)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.coding-card:hover::before {
+  opacity: 1;
+}
+
+.coding-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ICON CENTER */
+.coding-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+  transition: transform 0.4s ease;
+}
+
+.coding-card:hover .coding-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* TITLE */
+.coding-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.coding-card:hover .coding-title {
+  color: white;
+}
+
+/* LINK */
+.coding-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3498db;
+  transition: all 0.3s ease;
+}
+
+.coding-card:hover .coding-link {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .coding-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
