@@ -107,7 +107,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       name: 'Portfolio',
       icon: <FaGlobe />,
-      url: 'https://aniket10k.github.io/portfolio',
+      url: 'https://pranav-website-sigma.vercel.app/',
       color: '#e74c3c'
     },
     {
